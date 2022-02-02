@@ -1,0 +1,16 @@
+
+
+
+.gridParent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+
+    .div1 { grid-area: 1 / 1 / 10 / 2; }
+    .div2 { grid-area: 1 / 2 / 8 / 3; }
+    .div3 { grid-area: 8 / 2 / 9 / 3; }
+    .div4 { grid-area: 9 / 2 / 10 / 3; }
+    }
+

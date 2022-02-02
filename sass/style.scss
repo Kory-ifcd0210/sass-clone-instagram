@@ -1,0 +1,32 @@
+@use 'login';
+
+
+//Variables
+$principal-color:#FAFAFA;
+$light-blue: #B9DEFB;
+$gradient-complet: linear-gradient(235deg, #515bd4 0%, #8134af 25%, #dd2a7b 50%, #f58529 75%,  #feda77 100%);
+$gradient-simple: linear-gradient(90deg, #f9ed32 0%, #ee2a7b 100%);
+
+
+body{
+    background-color: $principal-color;
+}
+
+.navBar{
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 60px 0;
+
+        li{
+            display: inline-block;
+
+            a{
+                text-decoration: none;
+                color: white;
+                padding: 20px;
+                background: blue;
+            }
+        }
+    }
+}
