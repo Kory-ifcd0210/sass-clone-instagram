@@ -1,0 +1,24 @@
+//colors
+$principal-color:#FAFAFA;
+$light-blue: #B9DEFB;
+$blue:#0095F6;
+$grey:#ccc;
+
+//details
+$border: 1px solid $grey;
+$border-radius:3px;
+
+$gradient-complet: linear-gradient(235deg, #515bd4 0%, #8134af 25%, #dd2a7b 50%, #f58529 75%,  #feda77 100%);
+$gradient-simple: linear-gradient(90deg, #f9ed32 0%, #ee2a7b 100%);
+
+//fonts
+@font-face {
+    font-family: 'InstagramFont';
+    src: url("../assets/fonts/Fontspring-DEMO-blue_vinyl_bold_ps_ot.otf") format("truetype");
+}
+
+$font-logo: 'InstagramFont',
+sans-serif;
+$font-main: Arial,
+Helvetica,
+sans-serif;

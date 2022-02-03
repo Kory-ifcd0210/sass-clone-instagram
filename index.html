@@ -1,32 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Document</title>
 </head>
+
 <body>
-    <section class=gridParent>
-        <aside class= div1>
-            <p>Imagenes movil</p>
-        </aside>
-        <aside class= div2>
-            <h1>Instagram</h1>
-            <input type="text" name="user" id="user" placeholder="Teléfono,usuario o correo electrónico" required>
-            <input type="password" name="password" id="password" placeholder="password">
-            <a href="./view/home.html">Login</a>
-            <a href="facebook.com">Inicia sesión con Facebook</a>
-            <a href="#">¿Olvidaste tu contraseña?</a>
-        </aside>
-        <aside class= div3>
-            <p>Si no tienes cuenta</p>
-            <a href="#">Regístrate</a>
-        </aside>
-        <aside class= div4>
-            <p>Content Area Right</p>
-        </aside>
+    <section class="flex">
+        <article class="gridParent">
+            <aside class="left">
+                <img src="assets/img/movile.PNG" alt="mobile">
+            </aside>
+            <section class="right div2">
+                <h1>Instagram</h1>
+                <input type="text" name="user" id="user" placeholder="Teléfono,usuario o correo electrónico" required />
+                <input type="password" name="password" id="password" placeholder="password" />
+                <a href="./view/home.html" class="btn">Iniciar sesión</a>
+
+                <section class="separator">
+                    <div class="separator__line"></div>
+                    <p>o</p>
+                    <div class="separator__line"></div>
+                </section>
+
+                <a href="https://www.facebook.com/login" class="link FB">Login with Facebook</a>
+                <a href="#" class=" forgot">Forgot your password?</a>
+            </section>
+            <section class="right div3">
+                <p>If you don't have an account <a href="#" class="link">REGISTER</a></p>
+            </section>
+            <section class="right div4">
+                <p>Descargar App</p>
+            </section>
+                <section class="right div5">
+                    <article class="containerStore">
+                        <a href="#" class="img-store"
+                        ><img
+                        class="img"
+                        src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png"
+                        alt="appStoreLink"
+                        /></a>
+                        <a href="#" class="img-store"
+                        ><img
+                        class="img"
+                        src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png"
+                        alt="playStoreLink"
+                        /></a>
+                    </article>
+                  </section>
+        </article>
     </section>
 </body>
+
 </html>
