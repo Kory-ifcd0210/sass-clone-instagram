@@ -1,4 +1,6 @@
 @import 'login';
+@import "../assets/fontAwesome/scss/fontawesome.scss";
+@import "../assets/fontAwesome/scss/solid.scss";
 
 *{
     margin: 0;
@@ -12,23 +14,48 @@ body{
 }
 
 .navBar{
+    background-color: white;
+    border-bottom: 1px solid $grey;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     h1{
         font-family: $font-logo;
         font-size: 1.5rem;
+        display: inline-block;
+        margin-inline-end: 10em;
+    }
+    input{
+        background-color: $grey;
+        border: none;
+        border-radius: $border-radius;
+        padding: 0.5rem;
+    }
+    .input-wrapper {
+        display:inline-block;
+        position: relative
+    }
+    .input-wrapper:before {
+        font-family: 'FontAwesome';
+        content: '\f002';
+        position: absolute;
     }
     ul{
+        display: inline-flex;
         list-style: none;
         padding: 0;
-        margin: 60px 0;
 
         li{
             display: inline-block;
 
             a{
                 text-decoration: none;
-                padding: 20px;
                 img{
-                    width: 30px;
+                    margin-inline-start: 1.5rem;
+                    width: 25px;
+                    object-fit: cover;
                 }
             }
         }
