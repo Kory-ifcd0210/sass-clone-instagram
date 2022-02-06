@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color: $principal-color;
+    background-color: $light-grey;
     height: 100vh;
     font-family: $font-main;
 }
@@ -27,20 +27,24 @@ body{
         display: inline-block;
         margin-inline-end: 10em;
     }
-    input{
-        background-color: $grey;
-        border: none;
+    .inputSearch{
+        background-color: $light-grey;
         border-radius: $border-radius;
-        padding: 0.5rem;
-    }
-    .input-wrapper {
-        display:inline-block;
-        position: relative
-    }
-    .input-wrapper:before {
-        font-family: 'FontAwesome';
-        content: '\f002';
-        position: absolute;
+        padding-inline-start: 2%;
+        i{
+            color:$grey;
+        }
+        input{
+            border: none;
+            padding: 0.5rem;
+            background-color: transparent;
+            :focus{
+                border:none;
+            }
+        }
+        ::placeholder{
+            color: $grey;
+        }
     }
     ul{
         display: inline-flex;
@@ -52,10 +56,93 @@ body{
 
             a{
                 text-decoration: none;
+                .profile{
+                    @include profileImg(1.5rem);
+                }
                 img{
                     margin-inline-start: 1.5rem;
                     width: 25px;
                     object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+section{
+    display: flex;
+    justify-content: center;
+
+    .post{
+        background-color: $principal-color;
+        border: $border;
+        border-radius: $border-radius;
+        width: 35%;
+        margin-top: 2rem;
+
+        .user {
+            display: flex;
+            margin-inline-start: 0.5rem;
+            .borderGradient{
+                @include borderGradient;
+            }
+            img{
+                @include profileImg(3rem);
+            }
+            p{
+                display: flex;
+                align-items: center;
+                margin-inline-start: 0.5rem;
+            }
+        }
+
+        img{
+            width: 100%;
+        }
+
+        figcaption{
+            margin-top: 0.5rem;
+            margin-inline-start: 2rem;
+            margin-inline-end: 2rem;
+            .footerPost{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                .action{
+                    img{
+                        @include figcaption;
+                    }
+                    :hover{
+                        filter: $filter-icon;
+                    }
+                }
+                .mark{
+                    display: flex;
+                    justify-content: flex-end;
+                    img{
+                        @include figcaption;
+                    }
+                    :hover{
+                        filter: $filter-icon;
+                    }
+                }
+            }
+            article{
+                margin-top: 0.5rem;
+                .likes{
+                    font-weight: bold;
+                    margin-bottom: 0.5rem;
+                }
+                .comments{
+                    display: flex;
+                    margin-bottom: 0.5rem;
+                    span{
+                        font-weight: bold;
+                    }
+                }
+                .date{
+                    text-transform:uppercase;
+                    font-size: small;
+                    color: $grey;
                 }
             }
         }

@@ -1,6 +1,9 @@
 
 @import 'variables';
 
+.login{
+    background-color: $principal-color;
+}
 .flex {
     display: flex;
     align-items: center;
