@@ -2,13 +2,20 @@
   font-family: "InstagramFont";
   src: url("../assets/fonts/Fontspring-DEMO-blue_vinyl_bold_ps_ot.otf") format("truetype");
 }
+.flex-align-center, .containerPost .post .user .userName, .separator, .flex, .flex-align-justify-center, .navBar, .gridParent .div4, .gridParent .div3 {
+  display: flex;
+  align-items: center;
+}
+
+.flex-align-justify-center, .navBar, .gridParent .div4, .gridParent .div3 {
+  justify-content: center;
+}
+
 .login {
   background-color: #FAFAFA;
 }
 
 .flex {
-  display: flex;
-  align-items: center;
   justify-content: center;
   height: 100%;
   width: 100%;
@@ -46,40 +53,36 @@
 .right {
   align-items: center;
 }
-.right input {
+.right .inputLogin {
   width: 80%;
   margin-bottom: 2%;
   border: 1px solid #b9b9b9;
   height: 25px;
   border-radius: 5px;
 }
-.right a {
+.right .loginBtn {
   display: block;
-  text-decoration: none;
   width: 80%;
   margin: auto;
   margin-top: 2%;
   margin-bottom: 2%;
+  background-color: #0095F6;
+  border-radius: 5px;
+  color: white;
+  height: 25px;
 }
 .right .link {
   color: #0095F6;
   font-weight: bold;
 }
 .right .FB {
-  background: url("../assets/img/facebooklogo.png") no-repeat 10% 0;
-  background-size: 16px 16px;
-  padding-right: 19px;
+  width: 16px;
 }
 .right .forgot {
+  display: block;
   color: #b9b9b9;
 }
-.right .btn {
-  background-color: #0095F6;
-  border-radius: 5px;
-  color: white;
-  height: 25px;
-}
-.right h1 {
+.right .logoLogin {
   margin-bottom: 15%;
   margin-top: 15%;
   font-family: "InstagramFont", sans-serif;
@@ -88,9 +91,7 @@
 
 .separator {
   text-align: center;
-  display: flex;
   justify-content: space-evenly;
-  align-items: center;
   color: #b9b9b9;
   font-weight: bold;
 }
@@ -6228,15 +6229,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .navBar {
   background-color: white;
   border-bottom: 1px solid #b9b9b9;
   height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.navBar h1 {
+.navBar .instaLogo {
   font-family: "InstagramFont", sans-serif;
   font-size: 1.5rem;
   display: inline-block;
@@ -6250,57 +6252,57 @@ body {
 .navBar .inputSearch i {
   color: #b9b9b9;
 }
-.navBar .inputSearch input {
+.navBar .inputSearch #search {
   border: none;
   padding: 0.5rem;
   background-color: transparent;
 }
-.navBar .inputSearch input :focus {
+.navBar .inputSearch #search :focus {
   border: none;
 }
 .navBar .inputSearch ::placeholder {
   color: #b9b9b9;
 }
-.navBar ul {
+.navBar .navList {
   display: inline-flex;
   list-style: none;
   padding: 0;
 }
-.navBar ul li {
+.navBar .navList .navItem {
   display: inline-block;
 }
-.navBar ul li a {
+.navBar .navList .navItem a {
   text-decoration: none;
 }
-.navBar ul li a .profile {
+.navBar .navList .navItem a .profile {
   padding: 0.2rem;
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 50px;
   object-fit: cover;
 }
-.navBar ul li a img {
+.navBar .navList .navItem a .iconNav {
   margin-inline-start: 1.5rem;
   width: 25px;
   object-fit: cover;
 }
 
-section {
+.containerPost {
   display: flex;
   justify-content: center;
 }
-section .post {
+.containerPost .post {
   background-color: #FAFAFA;
   border: 1px solid #b9b9b9;
   border-radius: 3px;
   width: 35%;
   margin-top: 2rem;
 }
-section .post .user {
+.containerPost .post .user {
   display: flex;
   margin-inline-start: 0.5rem;
 }
-section .post .user .borderGradient {
+.containerPost .post .user .borderGradient {
   position: relative;
   background: linear-gradient(90deg, #f9ed32 0%, #ee2a7b 100%);
   border-radius: 50px;
@@ -6309,58 +6311,56 @@ section .post .user .borderGradient {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-section .post .user img {
+.containerPost .post .user .userPost {
   padding: 0.2rem;
   height: 3rem;
   width: 3rem;
   border-radius: 50px;
   object-fit: cover;
 }
-section .post .user p {
-  display: flex;
-  align-items: center;
+.containerPost .post .user .userName {
   margin-inline-start: 0.5rem;
 }
-section .post img {
+.containerPost .post .imgPost {
   width: 100%;
 }
-section .post figcaption {
+.containerPost .post figcaption {
   margin-top: 0.5rem;
   margin-inline-start: 2rem;
   margin-inline-end: 2rem;
 }
-section .post figcaption .footerPost {
+.containerPost .post figcaption .footerPost {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-section .post figcaption .footerPost .action img, section .post figcaption .footerPost .mark img {
+.containerPost .post figcaption .footerPost .action .postIcon, .containerPost .post figcaption .footerPost .mark .postIcon {
   margin-inline-end: 1rem;
   cursor: pointer;
   height: 1.5rem;
   width: auto;
 }
-section .post figcaption .footerPost .action :hover, section .post figcaption .footerPost .mark :hover {
+.containerPost .post figcaption .footerPost .action :hover, .containerPost .post figcaption .footerPost .mark :hover {
   filter: invert(88%) sepia(0%) saturate(0%) hue-rotate(285deg) brightness(86%) contrast(87%);
 }
-section .post figcaption .footerPost .mark {
+.containerPost .post figcaption .footerPost .mark {
   display: flex;
   justify-content: flex-end;
 }
-section .post figcaption article {
+.containerPost .post figcaption .containerComments {
   margin-top: 0.5rem;
 }
-section .post figcaption article .likes {
+.containerPost .post figcaption .containerComments .likes {
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
-section .post figcaption article .comments {
+.containerPost .post figcaption .containerComments .comments {
   display: flex;
   margin-bottom: 0.5rem;
 }
-section .post figcaption article .comments span {
+.containerPost .post figcaption .containerComments .comments .black {
   font-weight: bold;
 }
-section .post figcaption article .date {
+.containerPost .post figcaption .containerComments .date {
   text-transform: uppercase;
   font-size: small;
   color: #b9b9b9;

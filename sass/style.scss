@@ -13,15 +13,17 @@ body{
     font-family: $font-main;
 }
 
+a{
+    text-decoration: none;
+}
+
 .navBar{
     background-color: white;
     border-bottom: 1px solid $grey;
     height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend .flex-align-justify-center;
 
-    h1{
+    .instaLogo{
         font-family: $font-logo;
         font-size: 1.5rem;
         display: inline-block;
@@ -34,7 +36,7 @@ body{
         i{
             color:$grey;
         }
-        input{
+        #search{
             border: none;
             padding: $standard-margin;
             background-color: transparent;
@@ -46,12 +48,12 @@ body{
             color: $grey;
         }
     }
-    ul{
+    .navList{
         display: inline-flex;
         list-style: none;
         padding: 0;
 
-        li{
+        .navItem{
             display: inline-block;
 
             a{
@@ -59,7 +61,7 @@ body{
                 .profile{
                     @include profileImg(1.5rem);
                 }
-                img{
+                .iconNav{
                     margin-inline-start: 1.5rem;
                     width: 25px;
                     object-fit: cover;
@@ -69,7 +71,7 @@ body{
     }
 }
 
-section{
+.containerPost{
     display: flex;
     justify-content: center;
 
@@ -86,17 +88,16 @@ section{
             .borderGradient{
                 @include borderGradient;
             }
-            img{
+            .userPost{
                 @include profileImg(3rem);
             }
-            p{
-                display: flex;
-                align-items: center;
+            .userName{
+                @extend .flex-align-center;
                 margin-inline-start: $standard-margin;
             }
         }
 
-        img{
+        .imgPost{
             width: 100%;
         }
 
@@ -108,7 +109,7 @@ section{
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 .action{
-                    img{
+                    .postIcon{
                         @include figcaption;
                     }
                     :hover{
@@ -121,7 +122,7 @@ section{
                     @extend .action;
                 }
             }
-            article{
+            .containerComments{
                 margin-top: $standard-margin;
                 .likes{
                     font-weight: bold;
@@ -130,7 +131,7 @@ section{
                 .comments{
                     display: flex;
                     margin-bottom: $standard-margin;
-                    span{
+                    .black{
                         font-weight: bold;
                     }
                 }

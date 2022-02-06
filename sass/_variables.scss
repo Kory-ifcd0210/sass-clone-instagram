@@ -54,3 +54,14 @@ $fa-font-path:'../assets/fontAwesome/webfonts';
     height: 1.5rem;
     width: auto;
 }
+
+//align class
+.flex-align-center{
+    display: flex;
+    align-items: center;
+}
+
+.flex-align-justify-center{
+    @extend .flex-align-center;
+    justify-content: center;
+}
