@@ -2,13 +2,16 @@
   font-family: "InstagramFont";
   src: url("../assets/fonts/Fontspring-DEMO-blue_vinyl_bold_ps_ot.otf") format("truetype");
 }
+.flex-align-center, .separator, .flex {
+  display: flex;
+  align-items: center;
+}
+
 .login {
   background-color: #FAFAFA;
 }
 
 .flex {
-  display: flex;
-  align-items: center;
   justify-content: center;
   height: 100%;
   width: 100%;
@@ -53,13 +56,16 @@
   height: 25px;
   border-radius: 5px;
 }
-.right a {
+.right button {
   display: block;
-  text-decoration: none;
   width: 80%;
   margin: auto;
   margin-top: 2%;
   margin-bottom: 2%;
+  background-color: #0095F6;
+  border-radius: 5px;
+  color: white;
+  height: 25px;
 }
 .right .link {
   color: #0095F6;
@@ -73,12 +79,6 @@
 .right .forgot {
   color: #b9b9b9;
 }
-.right .btn {
-  background-color: #0095F6;
-  border-radius: 5px;
-  color: white;
-  height: 25px;
-}
 .right h1 {
   margin-bottom: 15%;
   margin-top: 15%;
@@ -88,9 +88,7 @@
 
 .separator {
   text-align: center;
-  display: flex;
   justify-content: space-evenly;
-  align-items: center;
   color: #b9b9b9;
   font-weight: bold;
 }

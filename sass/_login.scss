@@ -1,12 +1,17 @@
 
 @import 'variables';
 
+.flex-align-center{
+    display: flex;
+    align-items: center;
+}
+
 .login{
     background-color: $principal-color;
 }
+
 .flex {
-    display: flex;
-    align-items: center;
+    @extend .flex-align-center;
     justify-content: center;
     height: 100%;
     width: 100%;
@@ -58,13 +63,16 @@
         border-radius: 5px;
     }
 
-    a {
+    button {
         display: block;
-        text-decoration: none;
         width: 80%;
         margin: auto;
         margin-top: 2%;
         margin-bottom: 2%;
+        background-color: $blue;
+        border-radius: 5px;
+        color: white;
+        height: 25px;
     }
 
     .link {
@@ -81,13 +89,6 @@
         color: $grey;
     }
 
-    .btn {
-        background-color: $blue;
-        border-radius: 5px;
-        color: white;
-        height: 25px;
-    }
-
     h1 {
         margin-bottom: 15%;
         margin-top: 15%;
@@ -97,10 +98,9 @@
 }
 
 .separator {
+    @extend .flex-align-center;
     text-align: center;
-    display: flex;
     justify-content: space-evenly;
-    align-items: center;
     color: $grey;
     font-weight: bold;
 
