@@ -21,7 +21,9 @@ a{
     background-color: white;
     border-bottom: 1px solid $grey;
     height: 3rem;
-    @extend .flex-align-justify-center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .instaLogo{
         font-family: $font-logo;
@@ -92,7 +94,8 @@ a{
                 @include profileImg(3rem);
             }
             .userName{
-                @extend .flex-align-center;
+                display: flex;
+                align-items: center;
                 margin-inline-start: $standard-margin;
             }
         }

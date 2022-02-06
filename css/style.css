@@ -2,12 +2,12 @@
   font-family: "InstagramFont";
   src: url("../assets/fonts/Fontspring-DEMO-blue_vinyl_bold_ps_ot.otf") format("truetype");
 }
-.flex-align-center, .containerPost .post .user .userName, .separator, .flex, .flex-align-justify-center, .navBar, .gridParent .div4, .gridParent .div3 {
+.flex-align-center, .separator, .flex, .flex-align-justify-center, .gridParent .div4, .gridParent .div3 {
   display: flex;
   align-items: center;
 }
 
-.flex-align-justify-center, .navBar, .gridParent .div4, .gridParent .div3 {
+.flex-align-justify-center, .gridParent .div4, .gridParent .div3 {
   justify-content: center;
 }
 
@@ -6237,6 +6237,9 @@ a {
   background-color: white;
   border-bottom: 1px solid #b9b9b9;
   height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .navBar .instaLogo {
   font-family: "InstagramFont", sans-serif;
@@ -6319,6 +6322,8 @@ a {
   object-fit: cover;
 }
 .containerPost .post .user .userName {
+  display: flex;
+  align-items: center;
   margin-inline-start: 0.5rem;
 }
 .containerPost .post .imgPost {
