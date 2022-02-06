@@ -13,7 +13,7 @@ $filter-icon: invert(88%) sepia(0%) saturate(0%) hue-rotate(285deg) brightness(8
 //details
 $border: 1px solid $grey;
 $border-radius:3px;
-
+$standard-margin:0.5rem;
 
 //fonts
 @font-face {
@@ -44,8 +44,8 @@ $fa-font-path:'../assets/fontAwesome/webfonts';
     border-radius: 50px;
     width: 3.4rem;
     height: 3.4rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: $standard-margin;
+    margin-bottom: $standard-margin;
 }
 
 @mixin figcaption{

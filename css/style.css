@@ -6333,27 +6333,18 @@ section .post figcaption .footerPost {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-section .post figcaption .footerPost .action img {
+section .post figcaption .footerPost .action img, section .post figcaption .footerPost .mark img {
   margin-inline-end: 1rem;
   cursor: pointer;
   height: 1.5rem;
   width: auto;
 }
-section .post figcaption .footerPost .action :hover {
+section .post figcaption .footerPost .action :hover, section .post figcaption .footerPost .mark :hover {
   filter: invert(88%) sepia(0%) saturate(0%) hue-rotate(285deg) brightness(86%) contrast(87%);
 }
 section .post figcaption .footerPost .mark {
   display: flex;
   justify-content: flex-end;
-}
-section .post figcaption .footerPost .mark img {
-  margin-inline-end: 1rem;
-  cursor: pointer;
-  height: 1.5rem;
-  width: auto;
-}
-section .post figcaption .footerPost .mark :hover {
-  filter: invert(88%) sepia(0%) saturate(0%) hue-rotate(285deg) brightness(86%) contrast(87%);
 }
 section .post figcaption article {
   margin-top: 0.5rem;
